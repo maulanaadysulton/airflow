@@ -1,6 +1,6 @@
 Project ini dijalankan dalam environment docker, pastikan docker desktop sudah terinstall (jika belum terinstall, silahkan lakukan instalasi terlebih dahulu)
 
-1. Extract raw_data.zip pada folder JALA_Tech/assessment/data
+1. Extract raw_data.zip pada folder data
 
 2. Buka path menggunakan terminal, dan execute command: docker-compose -f docker-compose.yml up -d
 
@@ -10,8 +10,7 @@ Project ini dijalankan dalam environment docker, pastikan docker desktop sudah t
 	- scheduler
 	- webserver
 
-4. Execute command (pada terminal host machine): docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mysqldb  untuk melihat ip host machine untuk SQL Server.
-   Simpan IP yang muncul
+4. Execute command (pada terminal host machine): docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mysqldb  untuk melihat ip host machine untuk SQL Server. Simpan IP yang muncul
 
 5. Execute (pada terminal host machine): docker exec -it mysqldb /bin/bash, maka akan masuk pada terminal mysql.
 
