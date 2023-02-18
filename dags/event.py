@@ -102,7 +102,7 @@ def bulk_load_sql(table_name, separator, **context):
 dag = DAG(
     dag_id="get_event_data",
     start_date=airflow.utils.dates.days_ago(3),
-    schedule_interval=datetime.timedelta(minutes=10),
+    schedule_interval=datetime.timedelta(hours=2),
     catchup=False
 )
 
